@@ -1,5 +1,7 @@
 package Media;
 
+import java.util.Date;
+
 /**
  * Represents a media.
  */
@@ -18,6 +20,11 @@ public abstract class Media {
      * Media availability.
      */
     protected boolean status;
+
+    /**
+     * Loan time for media.
+     */
+    protected Date loanTime;
 
     /**
      * Creates an instance of Media.
