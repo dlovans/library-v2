@@ -1,5 +1,6 @@
 package Media;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -24,7 +25,7 @@ public abstract class Media {
     /**
      * Loan time for media.
      */
-    protected Date loanTime;
+    protected Calendar loanTime;
 
     /**
      * Creates an instance of Media.
@@ -41,8 +42,16 @@ public abstract class Media {
      * Lends the media.
      * @return - Whether media was lent or not.
      */
-    protected boolean loan() {
+    protected boolean loan(boolean isVIP) {
         if (this.status) {
+            loanTime = Calendar.getInstance();
+            if (isVIP) {
+                // 1-month loan period for VIPs.
+                loanTime.set(Calendar.MONTH, 1);
+            } else {
+                // 2 weeks loan period for regular members.
+                loanTime.set(Calendar.WEEK_OF_YEAR, 2);
+            }
             this.status = false;
             return true;
         } else {
