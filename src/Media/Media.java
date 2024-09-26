@@ -3,7 +3,7 @@ package Media;
 /**
  * Represents a media.
  */
-public class Media {
+public abstract class Media {
     /**
      * Title of media.
      */
