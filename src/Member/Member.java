@@ -1,6 +1,7 @@
 package Member;
 import Media.Media;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Represents a library member.
@@ -17,10 +18,16 @@ public class Member {
     protected boolean isVIP;
 
     /**
+     * Member full name.
+     */
+    protected String fullName;
+
+    /**
      * Creates an instance of Member with default values.
      */
-    public Member() {
+    public Member(String fullName) {
         this.isVIP = false;
+        this.fullName = fullName;
     }
 
     /**
