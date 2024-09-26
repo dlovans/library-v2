@@ -14,6 +14,8 @@ public class Media {
      */
     protected int publishingYear;
 
+    protected boolean status;
+
     /**
      * Creates an instance of Media.
      * @param title - Title of media.
@@ -22,5 +24,19 @@ public class Media {
     public Media(String title, int publishingYear) {
         this.title = title;
         this.publishingYear = publishingYear;
+        this.status = true;
     }
+
+    /**
+     * Lends the media.
+     */
+    public boolean loan() {
+        if (this.status) {
+            this.status = false;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
