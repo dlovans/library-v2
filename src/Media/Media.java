@@ -39,4 +39,16 @@ public class Media {
         }
     }
 
+    /**
+     * Return the media.
+     * @return - Whether media was returned or not.
+     */
+    public boolean returnMedia() {
+        if (!this.status) {
+            this.status = true;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
