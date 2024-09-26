@@ -23,7 +23,7 @@ public class Member {
     protected String fullName;
 
     /**
-     * Creates an instance of Member with default values.
+     * Creates an instance of Member with default and specified values.
      */
     public Member(String fullName) {
         this.isVIP = false;

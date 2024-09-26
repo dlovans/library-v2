@@ -1,7 +1,6 @@
 package Media;
 
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Represents a media.
