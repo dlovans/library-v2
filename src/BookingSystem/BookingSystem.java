@@ -49,4 +49,48 @@ public class BookingSystem {
             }
         }
     }
+
+    /**
+     * Submenu for member section.
+     */
+    private void memberSubMenu() {
+        int menuSelection = 0;
+
+        memberMenuLoop:
+        while (menuSelection == 0) {
+            System.out.println("Member Section: ");
+            System.out.println("1. Create member...");
+            System.out.println("2. Terminate member...");
+            System.out.println("3. Upgrade member...");
+            System.out.println("4. Downgrade member...");
+            System.out.println("5. Return to main menu...");
+
+            if (scanner.hasNextInt()) {
+                menuSelection = scanner.nextInt();
+                scanner.nextLine();
+            } else {
+                System.out.println("Please enter a valid option!");
+                continue;
+            }
+
+            switch (menuSelection) {
+                case 1:
+                    // Create member.
+                    break;
+                case 2:
+                    // Terminate member.
+                    break;
+                case 3:
+                    // Upgrade member.
+                    break;
+                case 4:
+                    // Downgrade member.
+                    break;
+                case 5:
+                    System.out.println("Returning to main menu...");
+                    System.out.println();
+                    break memberMenuLoop;
+            }
+        }
+    }
 }
