@@ -29,6 +29,7 @@ public class Media {
 
     /**
      * Lends the media.
+     * @return - Whether media was lent or not.
      */
     public boolean loan() {
         if (this.status) {
