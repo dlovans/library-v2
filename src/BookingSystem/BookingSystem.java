@@ -24,11 +24,9 @@ public class BookingSystem {
         System.out.println();
 
         while (true) {
-            System.out.println("1. Lend media...");
-            System.out.println("2. Return media...");
-            System.out.println("3. List lent media...");
-            System.out.println("4. List all media...");
-            System.out.println("5. Exit program...");
+            System.out.println("1. Media section...");
+            System.out.println("2. Member section...");
+            System.out.println("3. Exit program...");
 
             if (scanner.hasNextInt()) {
                 menuSelection = scanner.nextInt();
@@ -40,18 +38,12 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    // Lend a media.
+                    // Open media submenu.
                     break;
                 case 2:
-                    // Return a media.
+                    // Open member submenu.
                     break;
                 case 3:
-                    // List lent media.
-                    break;
-                case 4:
-                    // List all media.
-                    break;
-                case 5:
                     System.out.println("Exiting program...");
                     System.exit(0);
             }
