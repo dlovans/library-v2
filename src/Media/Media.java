@@ -14,6 +14,9 @@ public class Media {
      */
     protected int publishingYear;
 
+    /**
+     * Media availability.
+     */
     protected boolean status;
 
     /**
@@ -31,7 +34,7 @@ public class Media {
      * Lends the media.
      * @return - Whether media was lent or not.
      */
-    public boolean loan() {
+    protected boolean loan() {
         if (this.status) {
             this.status = false;
             return true;
@@ -44,7 +47,7 @@ public class Media {
      * Return the media.
      * @return - Whether media was returned or not.
      */
-    public boolean returnMedia() {
+    protected boolean returnMedia() {
         if (!this.status) {
             this.status = true;
             return true;
