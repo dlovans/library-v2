@@ -10,6 +10,11 @@ public class DVD extends Media {
     protected String director;
 
     /**
+     * Media type.
+     */
+    MediaType type;
+
+    /**
      * Creates an instance of DVD.
      * @param title - Title of DVD.
      * @param publishingYear - Release year of DVD.
@@ -18,5 +23,6 @@ public class DVD extends Media {
     public DVD(String title, int publishingYear, String director) {
         super(title, publishingYear);
         this.director = director;
+        this.type = MediaType.DVD;
     }
 }

@@ -5,6 +5,11 @@ package Media;
  */
 public class Book extends AuthoredMedia {
     /**
+     * Media type.
+     */
+    protected MediaType type;
+
+    /**
      * Creates an instance of Book.
      * @param title - Title of book.
      * @param author - Author of book.
@@ -12,5 +17,6 @@ public class Book extends AuthoredMedia {
      */
     public Book(String title, String author, int publishingYear) {
         super(title, author, publishingYear);
+        this.type = MediaType.BOOK;
     }
 }

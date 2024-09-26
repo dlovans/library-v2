@@ -5,6 +5,11 @@ package Media;
  */
 public class Newspaper extends AuthoredMedia {
     /**
+     * Media type.
+     */
+    MediaType type;
+
+    /**
      * Creates an instance of Newspaper.
      * @param title - Newspaper title.
      * @param author - Newspaper author.
@@ -12,5 +17,6 @@ public class Newspaper extends AuthoredMedia {
      */
     public Newspaper(String title, String author, int publishingYear) {
         super(title, author, publishingYear);
+        this.type = MediaType.NEWSPAPER;
     }
 }
