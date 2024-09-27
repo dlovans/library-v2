@@ -1,6 +1,4 @@
 package BookingSystem;
-import Media.*;
-import Member.*;
 
 import java.util.Scanner;
 
@@ -38,7 +36,7 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    this.mediaSubMenu();
+                    this.bookingSubMenu();
                     break;
                 case 2:
                     this.memberSubMenu();
@@ -97,10 +95,10 @@ public class BookingSystem {
     /**
      * Submenu for media section.
      */
-    private void mediaSubMenu() {
+    private void bookingSubMenu() {
         int menuSelection = 0;
 
-        mediaMenuLoop:
+        bookingMenuLoop:
         while (menuSelection == 0) {
             System.out.println("1. List due date loans...");
             System.out.println("2. Send invoice for due date loans...");
@@ -123,7 +121,7 @@ public class BookingSystem {
                 case 3:
                     System.out.println("Returning to main menu...");
                     System.out.println();
-                    break mediaMenuLoop;
+                    break bookingMenuLoop;
             }
         }
 
