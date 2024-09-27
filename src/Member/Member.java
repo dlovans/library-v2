@@ -22,7 +22,15 @@ public class Member {
      */
     final protected String fullName;
 
+    /**
+     * Birth year of member.
+     */
     final protected int birthYear;
+
+    /**
+     * Unique member id.
+     */
+    final protected UUID id;
 
     /**
      * Creates an instance of Member with default and specified values.
@@ -31,6 +39,7 @@ public class Member {
         this.fullName = fullName;
         this.birthYear = birthYear;
         this.isVIP = false;
+        this.id = UUID.randomUUID();
     }
 
     /**
