@@ -114,10 +114,17 @@ public class BookingMenuUtils extends MenuUtils {
             return;
         }
 
-        medias.add(lentMedias.get(indexOfMediaToReturn));
-        lentMedias.remove(indexOfMediaToReturn);
-        System.out.println("Media successfully returned.");
-        System.out.println("Returning to main menu");
-        System.out.println();
+        Media lentMedia = medias.get(indexOfMediaToReturn);
+        if (lentMedia.returnMedia()) {
+            medias.add(lentMedia);
+            lentMedias.remove(indexOfMediaToReturn);
+            System.out.println("Media successfully returned.");
+            System.out.println("Returning to main menu");
+        } else {
+            System.out.println("Failed to return media.");
+            System.out.println("Returning to main menu.");
+            return;
+        }
     }
+
 }

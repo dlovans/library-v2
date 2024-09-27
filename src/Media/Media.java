@@ -62,7 +62,7 @@ public abstract class Media {
      * Return the media.
      * @return - Whether media was returned or not.
      */
-    protected boolean returnMedia() {
+    public boolean returnMedia() {
         if (!this.status) {
             this.status = true;
             return true;
