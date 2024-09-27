@@ -82,5 +82,21 @@ public class MemberMenuUtils {
         System.out.println("Returning to main menu.");
     }
 
+    /**
+     * Downgrades a member to regular status.
+     * @param members - Collection of members.
+     */
+    protected void downgradeMember(ArrayList<Member> members) {
+        int indexOfMarkedMember;
+        System.out.println("Who would you like to downgrade to regular status? ");
+        indexOfMarkedMember = this.listAndSelectMember(members);
 
+        if (members.get(indexOfMarkedMember).downgradeMember()) {
+            System.out.println("Member successfully downgraded.");
+        } else {
+            System.out.println("Member already regular status.");
+        }
+
+        System.out.println("Returning to main menu.");
+    }
 }
