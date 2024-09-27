@@ -47,4 +47,22 @@ public class MemberMenuUtils {
 
         return indexOfMember;
     }
+
+    /**
+     * Terminates a member.
+     * @param members - Collection of all members.
+     */
+    protected void terminateMember(ArrayList<Member> members) {
+        int indexOfMarkedMember;
+
+        System.out.println("Who would you like to mark for termination? ");
+        indexOfMarkedMember = this.listAndSelectMember(members);
+        members.remove(indexOfMarkedMember);
+
+        System.out.println("Member successfully terminated.");
+        System.out.println("Returning to main menu.");
+
+    }
+
+
 }
