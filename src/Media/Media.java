@@ -41,7 +41,7 @@ public abstract class Media {
      * Lends the media.
      * @return - Whether media was lent or not.
      */
-    protected boolean loan(boolean isVIP) {
+    public boolean loan(boolean isVIP) {
         if (this.status) {
             loanTime = Calendar.getInstance();
             if (isVIP) {
