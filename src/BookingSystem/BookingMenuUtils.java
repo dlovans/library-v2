@@ -76,6 +76,11 @@ public class BookingMenuUtils extends MenuUtils {
         return indexOfMedia;
     }
 
+    /**
+     * Returns lent media.
+     * @param members - Collection of members.
+     * @param medias - Collection of media.
+     */
     protected void returnBooking(ArrayList<Member> members, ArrayList<Media> medias) {
         int indexOfMarkedMember;
         int indexOfMediaToReturn;
