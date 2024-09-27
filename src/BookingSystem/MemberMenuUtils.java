@@ -29,4 +29,21 @@ public class MemberMenuUtils {
         System.out.println("Members added successfully.");
         System.out.println();
     }
+
+    /**
+     * Lists all members. Selectable.
+     * @param members - Collection of all members.
+     * @return - Index number in collection of selected member.
+     */
+    private int listAndSelectMember(ArrayList<Member> members) {
+        int indexOfMember;
+        for (int i = 0; i < members.size(); i++) {
+            System.out.println((i + 1) + ". " + members.get(i));
+        }
+
+        indexOfMember = scanner.nextInt() - 1;
+        scanner.nextLine();
+
+        return indexOfMember;
+    }
 }
