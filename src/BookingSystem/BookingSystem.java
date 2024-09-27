@@ -144,7 +144,7 @@ public class BookingSystem {
                     this.bookingMenuUtils.returnBooking(membersCollection, mediaCollection);
                     break;
                 case 3:
-                    // Send invoice for due date bookings.
+                    this.bookingMenuUtils.sendInvoice(membersCollection);
                 case 4:
                     System.out.println("Returning to main menu...");
                     System.out.println();
