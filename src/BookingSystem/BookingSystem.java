@@ -145,6 +145,7 @@ public class BookingSystem {
                     break;
                 case 3:
                     this.bookingMenuUtils.sendInvoice(membersCollection);
+                    break;
                 case 4:
                     System.out.println("Returning to main menu...");
                     System.out.println();
