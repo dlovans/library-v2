@@ -4,6 +4,7 @@ import Member.*;
 import Media.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Scanner;
 
 /**
@@ -123,8 +124,30 @@ public class BookingMenuUtils extends MenuUtils {
         } else {
             System.out.println("Failed to return media.");
             System.out.println("Returning to main menu.");
-            return;
         }
     }
 
+    protected void sendInvoice(ArrayList<Member> members) {
+        int numberOfDueDates = 0;
+
+        for (Member member : members) {
+            ArrayList<Media> lentMedias = member.getLoanedMedia();
+            for (Media lentMedia: lentMedias) {
+                if (lentMedia.getLoanTime() != null && !lentMedia.getStatus()) {
+                    if (Calendar.getInstance().after(lentMedia.getLoanTime())) {
+                        numberOfDueDates++;
+                    }
+                }
+            }
+        }
+
+        if (numberOfDueDates == 0) {
+            System.out.println("Library has no due dates.");
+        } else {
+            System.out.println(numberOfDueDates + " due date(s).");
+            System.out.println("Sending invoices...Sent.");
+        }
+
+        System.out.println("Returning to main menu.");
+    }
 }
