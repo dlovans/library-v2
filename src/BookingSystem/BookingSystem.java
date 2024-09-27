@@ -41,7 +41,7 @@ public class BookingSystem {
                     // Open media submenu.
                     break;
                 case 2:
-                    // Open member submenu.
+                    this.memberSubMenu();
                     break;
                 case 3:
                     System.out.println("Exiting program...");
