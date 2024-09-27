@@ -15,6 +15,11 @@ public class BookingMenuUtils extends MenuUtils {
      */
     final private Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Creates a booking.
+     * @param members - Collection of members.
+     * @param medias - Collection of media.
+     */
     private void createBooking(ArrayList<Member> members, ArrayList<Media> medias) {
         int indexOfMarkedMember;
         int indexOfMediaToLoan;
