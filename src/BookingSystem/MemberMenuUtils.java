@@ -37,6 +37,7 @@ public class MemberMenuUtils {
      * @return - Index number in collection of selected member.
      */
     private int listAndSelectMember(ArrayList<Member> members) {
+        if (members.isEmpty()) { return -1; }
         int indexOfMember;
         for (int i = 0; i < members.size(); i++) {
             System.out.println((i + 1) + ". " + members.get(i));
@@ -57,6 +58,13 @@ public class MemberMenuUtils {
 
         System.out.println("Who would you like to mark for termination? ");
         indexOfMarkedMember = this.listAndSelectMember(members);
+
+        if (indexOfMarkedMember == -1) {
+            System.out.println("Library has no members :S");
+            System.out.println("Returning to main menu.");
+            return;
+        }
+
         members.remove(indexOfMarkedMember);
 
         System.out.println("Member successfully terminated.");
@@ -72,6 +80,12 @@ public class MemberMenuUtils {
         int indexOfMarkedMember;
         System.out.println("Who would you like to upgrade to VIP status? ");
         indexOfMarkedMember = this.listAndSelectMember(members);
+
+        if (indexOfMarkedMember == -1) {
+            System.out.println("Library has no members :S");
+            System.out.println("Returning to main menu.");
+            return;
+        }
 
         if (members.get(indexOfMarkedMember).upgradeMember()) {
             System.out.println("Member successfully upgraded.");
@@ -90,6 +104,12 @@ public class MemberMenuUtils {
         int indexOfMarkedMember;
         System.out.println("Who would you like to downgrade to regular status? ");
         indexOfMarkedMember = this.listAndSelectMember(members);
+
+        if (indexOfMarkedMember == -1) {
+            System.out.println("Library has no members :S");
+            System.out.println("Returning to main menu.");
+            return;
+        }
 
         if (members.get(indexOfMarkedMember).downgradeMember()) {
             System.out.println("Member successfully downgraded.");
