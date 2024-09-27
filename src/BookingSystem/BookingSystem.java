@@ -93,4 +93,39 @@ public class BookingSystem {
             }
         }
     }
+
+    /**
+     * Submenu for media section.
+     */
+    private void mediaSubMenu() {
+        int menuSelection = 0;
+
+        mediaMenuLoop:
+        while (menuSelection == 0) {
+            System.out.println("1. List due date loans...");
+            System.out.println("2. Send invoice for due date loans...");
+            System.out.println("3. Return to main menu...");
+            if (scanner.hasNextInt()) {
+                menuSelection = scanner.nextInt();
+                scanner.nextLine();
+            } else {
+                System.out.println("Please enter a valid option!");
+                continue;
+            }
+
+            switch (menuSelection) {
+                case 1:
+                    // List media with due date.
+                    break;
+                case 2:
+                    // Send invoice for due date loans.
+                    break;
+                case 3:
+                    System.out.println("Returning to main menu...");
+                    System.out.println();
+                    break mediaMenuLoop;
+            }
+        }
+
+    }
 }
