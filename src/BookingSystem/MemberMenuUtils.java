@@ -64,5 +64,23 @@ public class MemberMenuUtils {
 
     }
 
+    /**
+     * Upgrades member to VIP status.
+     * @param members - Collection of all members.
+     */
+    protected void upgradeMember(ArrayList<Member> members) {
+        int indexOfMarkedMember;
+        System.out.println("Who would you like to upgrade to VIP status? ");
+        indexOfMarkedMember = this.listAndSelectMember(members);
+
+        if (members.get(indexOfMarkedMember).upgradeMember()) {
+            System.out.println("Member successfully upgraded.");
+        } else {
+            System.out.println("Member already VIP.");
+        }
+
+        System.out.println("Returning to main menu.");
+    }
+
 
 }

@@ -46,7 +46,7 @@ public class Member {
      * Upgrades a member to VIP status.
      * @return - Whether member has been upgraded or not.
      */
-    protected boolean upgradeMember() {
+    public boolean upgradeMember() {
         if (this.isVIP) {
             return false;
         } else {
