@@ -96,16 +96,16 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    // Create member.
+                    this.memberMenuUtils.createMember(membersCollection);
                     break;
                 case 2:
-                    // Terminate member.
+                    this.memberMenuUtils.terminateMember(membersCollection);
                     break;
                 case 3:
-                    // Upgrade member.
+                    this.memberMenuUtils.upgradeMember(membersCollection);
                     break;
                 case 4:
-                    // Downgrade member.
+                    this.memberMenuUtils.downgradeMember(membersCollection);
                     break;
                 case 5:
                     System.out.println("Returning to main menu...");
