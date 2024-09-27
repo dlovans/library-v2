@@ -1,5 +1,8 @@
 package BookingSystem;
 
+import Member.*;
+import Media.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -9,7 +12,27 @@ public class BookingSystem {
     /**
      * Scanner object to read console stream.
      */
-    Scanner scanner = new Scanner(System.in);
+    final private Scanner scanner = new Scanner(System.in);
+
+    /**
+     * Collection of registered members.
+     */
+    final ArrayList<Member> membersCollection = new ArrayList<Member>();
+
+    /**
+     * Collection of library media.
+     */
+    final ArrayList<Media> mediaCollection = new ArrayList<Media>();
+
+    /**
+     * An instance of BookingMenuUtils.
+     */
+    final private BookingMenuUtils bookingMenuUtils = new BookingMenuUtils();
+
+    /**
+     * An instance of MemberMenuUtils.
+     */
+    final private MemberMenuUtils memberMenuUtils = new MemberMenuUtils();
 
     /**
      * Interface to interact with program.
