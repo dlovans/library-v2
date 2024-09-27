@@ -83,4 +83,12 @@ public class Member {
         }
         return false;
     }
+
+    /**
+     * Getter for LoanedMedia.
+     * @return - Collection of lent media.
+     */
+    public ArrayList<Media> getLoanedMedia() {
+        return this.loanedMedia;
+    }
 }
