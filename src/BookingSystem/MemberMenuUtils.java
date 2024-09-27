@@ -25,6 +25,7 @@ public class MemberMenuUtils {
         name = scanner.nextLine();
         System.out.println("Enter the birth year of the new member: ");
         birthYear = scanner.nextInt();
+        scanner.nextLine();
         members.add(new Member(name, birthYear));
         System.out.println("Members added successfully.");
         System.out.println();
