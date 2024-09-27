@@ -70,4 +70,20 @@ public abstract class Media {
             return false;
         }
     }
+
+    /**
+     * Returns loan time for a lent media.
+     * @return - Loan time.
+     */
+    public Calendar getLoanTime() {
+        return loanTime;
+    }
+
+    /**
+     * Media availability.
+     * @return - Availability of media.
+     */
+    public boolean getStatus() {
+        return status;
+    }
 }
