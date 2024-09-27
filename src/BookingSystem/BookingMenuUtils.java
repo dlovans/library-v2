@@ -40,6 +40,11 @@ public class BookingMenuUtils extends MenuUtils {
         System.out.println("Select media to loan: ");
         indexOfMediaToLoan = this.listAndSelectMedia(medias);
 
+        if (indexOfMediaToLoan == -1) {
+            System.out.println("Library has no media.");
+            System.out.println("Returning to main menu");
+        }
+
         media = medias.get(indexOfMediaToLoan);
         if (media.loan(member.getMemberStatus())) {
             System.out.println("Successfully loaned member.");
@@ -49,5 +54,22 @@ public class BookingMenuUtils extends MenuUtils {
         System.out.println("Returning to main menu");
     }
 
+    /**
+     * Lists all media. Selectable.
+     * @param medias - Collection of media.
+     * @return - Index number for selected media.
+     */
+    private int listAndSelectMedia(ArrayList<Media> medias) {
+        int indexOfMedia;
 
+        if (medias.isEmpty()) { return -1; };
+
+        for (int i = 0; i < medias.size(); i++) {
+            System.out.println((i + 1) + ". " + medias.get(i));
+        }
+
+        indexOfMedia = scanner.nextInt() - 1;
+        scanner.nextLine();
+        return indexOfMedia;
+    }
 }
