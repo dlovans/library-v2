@@ -17,12 +17,12 @@ public class BookingSystem {
     /**
      * Collection of registered members.
      */
-    final ArrayList<Member> membersCollection = new ArrayList<Member>();
+    final private ArrayList<Member> membersCollection = new ArrayList<Member>();
 
     /**
      * Collection of library media.
      */
-    final ArrayList<Media> mediaCollection = new ArrayList<Media>();
+    final private ArrayList<Media> mediaCollection = new ArrayList<Media>();
 
     /**
      * An instance of BookingMenuUtils.
@@ -138,7 +138,7 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    // Create booking.
+                    this.bookingMenuUtils.createBooking(membersCollection, mediaCollection);
                     break;
                 case 2:
                     // Return booking.

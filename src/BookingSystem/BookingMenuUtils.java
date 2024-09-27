@@ -20,7 +20,7 @@ public class BookingMenuUtils extends MenuUtils {
      * @param members - Collection of members.
      * @param medias - Collection of media.
      */
-    private void createBooking(ArrayList<Member> members, ArrayList<Media> medias) {
+    protected void createBooking(ArrayList<Member> members, ArrayList<Media> medias) {
         int indexOfMarkedMember;
         int indexOfMediaToLoan;
         Member member;
@@ -47,6 +47,7 @@ public class BookingMenuUtils extends MenuUtils {
 
         media = medias.get(indexOfMediaToLoan);
         if (media.loan(member.getMemberStatus())) {
+            member.addLentMedia(media);
             System.out.println("Successfully loaned member.");
         } else {
             System.out.println("Failed to loan member.");
