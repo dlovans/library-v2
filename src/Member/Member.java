@@ -8,11 +8,6 @@ import java.util.UUID;
  */
 public class Member {
     /**
-     * Loaned media.
-     */
-    final protected ArrayList<Media> loanedMedia = new ArrayList<Media>();
-
-    /**
      * If member is a VIP.
      */
     protected boolean isVIP;
@@ -66,5 +61,13 @@ public class Member {
         } else {
             return false;
         }
+    }
+
+    /**
+     * Getter for member status.
+     * @return - VIP status.
+     */
+    public boolean getMemberStatus() {
+        return this.isVIP;
     }
 }
