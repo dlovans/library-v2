@@ -23,18 +23,12 @@ public class Member {
     final protected int birthYear;
 
     /**
-     * Unique member id.
-     */
-    final protected UUID id;
-
-    /**
      * Creates an instance of Member with default and specified values.
      */
     public Member(String fullName, int birthYear) {
         this.fullName = fullName;
         this.birthYear = birthYear;
         this.isVIP = false;
-        this.id = UUID.randomUUID();
     }
 
     /**
