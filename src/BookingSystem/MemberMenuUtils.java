@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Utility class for member submenu.
  */
-public class MemberMenuUtils {
+public class MemberMenuUtils extends MenuUtils {
     /**
      * Scanner object to read console stream.
      */
@@ -32,24 +32,6 @@ public class MemberMenuUtils {
     }
 
     /**
-     * Lists all members. Selectable.
-     * @param members - Collection of all members.
-     * @return - Index number in collection of selected member.
-     */
-    private int listAndSelectMember(ArrayList<Member> members) {
-        if (members.isEmpty()) { return -1; }
-        int indexOfMember;
-        for (int i = 0; i < members.size(); i++) {
-            System.out.println((i + 1) + ". " + members.get(i));
-        }
-
-        indexOfMember = scanner.nextInt() - 1;
-        scanner.nextLine();
-
-        return indexOfMember;
-    }
-
-    /**
      * Terminates a member.
      * @param members - Collection of all members.
      */
@@ -57,7 +39,7 @@ public class MemberMenuUtils {
         int indexOfMarkedMember;
 
         System.out.println("Who would you like to mark for termination? ");
-        indexOfMarkedMember = this.listAndSelectMember(members);
+        indexOfMarkedMember = super.listAndSelectMember(members);
 
         if (indexOfMarkedMember == -1) {
             System.out.println("Library has no members :S");
@@ -79,7 +61,7 @@ public class MemberMenuUtils {
     protected void upgradeMember(ArrayList<Member> members) {
         int indexOfMarkedMember;
         System.out.println("Who would you like to upgrade to VIP status? ");
-        indexOfMarkedMember = this.listAndSelectMember(members);
+        indexOfMarkedMember = super.listAndSelectMember(members);
 
         if (indexOfMarkedMember == -1) {
             System.out.println("Library has no members :S");
@@ -103,7 +85,7 @@ public class MemberMenuUtils {
     protected void downgradeMember(ArrayList<Member> members) {
         int indexOfMarkedMember;
         System.out.println("Who would you like to downgrade to regular status? ");
-        indexOfMarkedMember = this.listAndSelectMember(members);
+        indexOfMarkedMember = super.listAndSelectMember(members);
 
         if (indexOfMarkedMember == -1) {
             System.out.println("Library has no members :S");
