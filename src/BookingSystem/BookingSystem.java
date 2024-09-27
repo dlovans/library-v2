@@ -93,16 +93,18 @@ public class BookingSystem {
     }
 
     /**
-     * Submenu for media section.
+     * Submenu for booking section.
      */
     private void bookingSubMenu() {
         int menuSelection = 0;
 
         bookingMenuLoop:
         while (menuSelection == 0) {
-            System.out.println("1. List due date loans...");
-            System.out.println("2. Send invoice for due date loans...");
-            System.out.println("3. Return to main menu...");
+            System.out.println("1. Create booking...");
+            System.out.println("2. Return booking...");
+            System.out.println("3. List due date bookings...");
+            System.out.println("4. Send invoice for due date bookings...");
+            System.out.println("5. Return to main menu...");
             if (scanner.hasNextInt()) {
                 menuSelection = scanner.nextInt();
                 scanner.nextLine();
@@ -113,12 +115,17 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    // List media with due date.
+                    // Create booking.
                     break;
                 case 2:
-                    // Send invoice for due date loans.
+                    // Return booking.
                     break;
                 case 3:
+                    // List due date bookings.
+                    break;
+                case 4:
+                    // Send invoice for due date bookings.
+                case 5:
                     System.out.println("Returning to main menu...");
                     System.out.println();
                     break bookingMenuLoop;
