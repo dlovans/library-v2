@@ -59,7 +59,7 @@ public class Member {
      * Downgrades a member to regular status.
      * @return - Whether member has been downgraded or not.
      */
-    protected boolean downgradeMember() {
+    public boolean downgradeMember() {
         if (this.isVIP) {
             this.isVIP = false;
             return true;
