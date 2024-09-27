@@ -127,6 +127,10 @@ public class BookingMenuUtils extends MenuUtils {
         }
     }
 
+    /**
+     * Sends invoice to members with past due dates lending.
+     * @param members - Collection of members.
+     */
     protected void sendInvoice(ArrayList<Member> members) {
         int numberOfDueDates = 0;
 
