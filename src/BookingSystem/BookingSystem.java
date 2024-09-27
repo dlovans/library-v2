@@ -38,7 +38,7 @@ public class BookingSystem {
 
             switch (menuSelection) {
                 case 1:
-                    // Open media submenu.
+                    this.mediaSubMenu();
                     break;
                 case 2:
                     this.memberSubMenu();
