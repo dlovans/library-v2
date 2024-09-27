@@ -141,14 +141,11 @@ public class BookingSystem {
                     this.bookingMenuUtils.createBooking(membersCollection, mediaCollection);
                     break;
                 case 2:
-                    // Return booking.
+                    this.bookingMenuUtils.returnBooking(membersCollection, mediaCollection);
                     break;
                 case 3:
-                    // List due date bookings.
-                    break;
-                case 4:
                     // Send invoice for due date bookings.
-                case 5:
+                case 4:
                     System.out.println("Returning to main menu...");
                     System.out.println();
                     break bookingMenuLoop;
